@@ -9,6 +9,17 @@
 
 <style>
 
+    .letter-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto 20px;
+        border-radius: 12px;
+        object-fit: contain;
+        max-height: 55vh;
+    }
+
 /* =================================
    ASOSIY
 ================================= */
@@ -131,7 +142,7 @@ body {
 
     justify-content: center;
 
-    padding: 25px;
+    padding: 15px;
 
     text-align: center;
 
@@ -769,7 +780,16 @@ button:active {
         line-height: 1.7;
     }
 
+
+#page7 {
+    align-items: flex-start;
+    overflow-y: auto;
+    padding-top: 25px;
+    padding-bottom: 35px;
 }
+
+}
+
 
 
 /* =================================
@@ -806,6 +826,46 @@ button:active {
     }
 }
 
+#musicButton {
+    padding: 5px 15px;
+    font-size: 12px;
+}
+
+.first-meet {
+    position: fixed;
+    right: 20px;
+    top: 15px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 100;
+    pointer-events: none;
+}
+
+.letter-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.letter-photos img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+
+.photo-message {
+    grid-column: 1 / 3;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+    margin: -2px 0 -2px;
+}
+
+
 </style>
 
 </head>
@@ -840,6 +900,7 @@ button:active {
 </audio>
 
 
+
 <!-- =================================
      1-SAHIFA
 ================================= -->
@@ -856,8 +917,7 @@ button:active {
 
 
         <h1>
-            Shunchaki senga shularni 
-            aytmoqchiman...
+            Ozroq suhbatlashamizmi?
         </h1>
 
 
@@ -865,7 +925,7 @@ button:active {
             Oradan qancha vaqt o'tmasin,
             ayrim xotiralar baribir o'sha kunligacha qolarkan.
             <br><br>
-            ozroq suxbatlashamizmi?
+            Shunchaki senga shularni aytmoqchiman.
         </p>
 
 
@@ -913,6 +973,8 @@ button:active {
             <br> 
             Ingliz tili kursiga dep chiqib ko'rishganlarimiz,
             <br>
+            Urishib qosek o'qishinga borib yarashib kelardim😅
+            <br>
             oddiygina birga bo'lganimiz
             ham men uchun juda qadrli edi.
 
@@ -928,8 +990,11 @@ button:active {
             Lekin men u kunlarni
             hech qachon yomon xotira
             deb eslamayman. ❤️‍🩹
+        
 
         </p>
+
+        <button id="musicButton">🎵 Musiqani almashtirish</button>
 
 
         <!-- =================================
@@ -961,10 +1026,34 @@ button:active {
                     src="janona3.jpg"
                     alt="Janona xotira 3">
 
+                    <img
+                    src="janona4.jpg"
+                    alt="Janona xotira 4">
+
+
+                   <img
+                    src="janona5.jpg"
+                    alt="Janona xotira 5">
+
+                    <img
+                    src="janona6.jpg"
+                    alt="Janona xotira 6">
+
+                    <img
+                    src="janona7.jpg"
+                    alt="Janona xotira 7">
+
+
 
             </div>
 
         </div>
+
+        <p class="memory-text">
+            Bu jinniliklarimizi hich qachon unutomasam kerek.
+            <br>
+            Qanaqa chiroyli kunlarimiz boshlangan kunlar...
+        </p>
 
 
         <button
@@ -998,18 +1087,29 @@ button:active {
 
         <h1>
 
-            Men seni hali ham
-            yaxshi ko'raman.
+            Gaplashging keladi?
 
         </h1>
 
 
         <p>
 
-            Bilaman bu imkonsiz bo'lsa ham
-            aytgim keldi...
+           Sen bilan oila qurmoqchi edim- 
+           <br>
+           Ko'zlaringdek ko'zlari bor qizim bo'lishini,
+           <br>
+           Sen bilan mushukcha boqishni,
+           <br>
+           Uxlayotganingda seni quchoqlashni,
+           <br>
+           Qiyinchiliklarni birga yengishni istagan edim...
 
             <br><br>
+
+            <h1>
+              Seni hozir ham yaxshi ko'raman...  
+            </h1>
+
 
             Shunchaki tug'ilgan kuningda
             yuragimdagi bu gapni
@@ -1053,8 +1153,9 @@ button:active {
 
 
         <p>
-            Bu hech nimani xal qilmedi shunchaki haliyam 
-            yuraginda oz bolsayam o'rnim bormi bilmoqchiman...
+            Biz yana uchrashamiz men bunga
+            <br>
+            ishonaman chunki biz hayirlashmagandik.
         </p>
 
 
@@ -1065,7 +1166,7 @@ button:active {
                 id="yesButton"
                 onclick="yesAnswer()">
 
-                Ha ❤️
+                Ha 💔
 
             </button>
 
@@ -1105,24 +1206,29 @@ button:active {
 
 
         <h1>
-            Men bilardim... ❤️
+            xaa... ❤️
         </h1>
 
 
         <p>
 
-            Bu shunchaki soxta "HA" bo'lgani bilan meni
-            qanchalik xursandligimi bilganingda edi.
+            Bu shunchaki soxta "HA" bo'lgani bilan
+            <br>
+            meni qanchalik xursandligimi bilganingda edi.
 
             <br><br>
 
-            Oldingi kunlarimizni
-            qaytara olmaymiz.
+            Seni mahkamroq quchoqlamaganim uchun
+            <br>
+            uzur so'rayman, oxirgi marta 
+            <br>
+            ekanligini bilmagan edim...
 
             <br><br>
 
             Lekin birga o'tgan kunlarimiz
             va sendan qolgan xotiralar
+            <br>
             men uchun doim qadrli
             bo'lib qoladi.
 
@@ -1161,7 +1267,7 @@ button:active {
         <h1>
 
             Tug'ilgan kuning muborak,
-            Janona!
+            Janonam!
 
         </h1>
 
@@ -1170,7 +1276,7 @@ button:active {
 
             Bugun sening tug‘ilgan kuning.
             Men esa bu kunni shunchaki o‘tib ketishini xohlamadim.
-            Chunki ba’zi insonlarning tug‘ilgan kuni — ular 
+            Chunki ba’zi insonlarning tug‘ilgan kuni ular 
             hayotingda bo‘lganini yana bir bor eslatadigan kun.
             Yangi yoshing chiroyli voqealarga boy bo‘lsin, Janonam. ❤️
 
@@ -1205,7 +1311,7 @@ button:active {
     <div class="content">
 
 
-        <div class="main-heart">
+        <div class="main-heart"> 
             💌
         </div>
 
@@ -1223,21 +1329,70 @@ button:active {
 
             <div class="letter">
 
+                <div class="letter-photos">
+    <img src="maktub1.jpg" alt="❤️">
+    <img src="maktub2.jpg" alt="❤️">
+    <img src="maktub3.jpg" alt="❤️">
+    <img src="maktub4.jpg" alt="❤️">
+
+    <p class="photo-message">Biz baxtli bo‘lishga loyiqmasmidik?</p>
+
+</div>
+
 
                 <!-- ⭐ FAQAT SHU JOYGA O'Z XATINGNI YOZ ⭐ -->
 
 
-                Munosabatimiz tugaganiga haliyam meni ayibdor dep o'ylayabsanmi?
+                Otnasheniyamiz tugaganiga haliyam meni ayibdor dep o'ylayabsanmi?
                 <br>
-                Meni ozindan uzoqlashtirgan kechishga majbur qilgan xatoyin 
-                hammasini o'zgartirdi
+                Meni o'zindan uzoqlashtirgan kechishga majbur qilgan xatoyin 
+                hammasini o'zgartirdi.
                 <br> 
-                Buni smsda tushuntirish qiyin buni 
-                muhim dep bilsen qachonki tel qilganinda aytaman
-                <br> Lekin
-                buni bilishing kerek seni vaxt o'tkizish yoki manfatim uchun sevmaganman
+                Yetkizishyabdi ko'rdim xozirgi hayotin yaxshi hursandman xozir uzbdan ketmaganimda balki birga bo'larmidik yana bilmadim.
                 <br>
-                Meni xayotimda birinchi va oxirgisi bo'lib qolasan xa bu o'sha abu...
+                Bu hichqanaqa yarashish uchun xarakatmas shunchaki bugun seni kuning. 
+                <br> 
+                Lekin bilishing kerek seni vaxt o'tkizish yoki manfatim uchun sevmaganman.
+                <br>
+                Hayotimda birinchi va oxirgisi bo'lib qolasan.
+                <br>
+                Hayotimiz bu darajada o'zgarib ketishini bilganimda ming america
+                bo'masin bormagan bo'lardim xoxlamasamam tugadi. 
+                <br>
+                Bu yerga kop narsa yozmiman lekin xoxlaganinda tel qil. 
+                <br><BR>
+                xa bu o'sha sen sevgan va seni sevgan abu...
+                <br><BR>
+                Hozirgi xayoting juda qiziq qayerda kim bilansan hayotingdegi o'zgarishla yangilila jondep eshitkan bo'lardim oxirgi yozishkanimzda sezdim hammasni unutbogansa qizigiyam yo bu narsa faqat tug'ilgan kuning uchun xolos.
+                <br>
+                Bilaman otnasheniyamiz bor payt ko'p xatola qiganma inkor qmiman lekin u xatola sen qigan xato yonida hichnarsamas uni smsda tushuntirish qiyin💔.
+                <br>
+                Afsuslanam o'sha kuni shu narsani bilganimga eshitkanimga,
+                qaniydi eshitmasam nima qilib bosayam hammasni tiklardim seni qaytarardim.
+                <br>
+                Shu narsalani bilib turibamn hali hichkmga o'rningni bermadim.
+                <br><br>
+                TikTokda yaxshi ketyabsan postla tagidegi commentla uchun alohida 5 baho o'ylenamki
+                o'zin xoxlagan hayotda yashaybsan.
+                <br>
+                Seni sevganimi yashirmasdan hammaga aytkanim uchun endi o'sha odamla har post qo'yganingda
+                menga jo'natishadi men jim kuzataman bu qanchali qiyin?
+                <br><br>
+                Buni senga jo'natishdan oldin juda ko'p o'yladim ne interesno bo'sachi degan hayol qiynavordi. 
+                <br>
+                Agar shuyergacha o'qigan bo'sen xursandman...
+                <br><br>
+                Tug'ilgan kuninga xoxlesanmi🎈👇🏻
+                <br>
+                <a href="https://www.instagram.com/reel/DcsfWDGsrST/?stkn=azM3N3kzenl5emt1"
+   target="_blank">
+    https://www.instagram.com/reel/DcsfWDGsrST/?stkn=azM3N3kzenl5emt1
+</a>
+                
+                <br><br>
+                This website will be active for one day only,
+                <br>
+                exclusively for Janona. Just one day!❤️
                 
 
 
@@ -1567,8 +1722,20 @@ setInterval(() => {
 
 createHearts(8);
 
+const music = document.getElementById("backgroundMusic");
+const musicButton = document.getElementById("musicButton");
+
+const songs = ["love.mp3", "love1.mp3", "love2.mp3", "love3.mp3", "love4.mp3", "love5.mp3"];
+let currentSong = 0;
+
+musicButton.onclick = function () {
+    currentSong = (currentSong + 1) % songs.length;
+    music.src = songs[currentSong];
+    music.play();
+};
+
 
 </script>
-
+<div class="first-meet">05.31.2024 ♾️</div>
 </body>
 </html>
